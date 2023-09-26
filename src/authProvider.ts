@@ -4,8 +4,8 @@ export const TOKEN_KEY = "refine-auth";
 
 export const authProvider: AuthBindings = {
   login: async ({ username, email, password }) => {
-    if ((username || email) && password) {
-      localStorage.setItem(TOKEN_KEY, username);
+    if ( email && password) {
+      localStorage.setItem(TOKEN_KEY, email);
       return {
         success: true,
         redirectTo: "/",
@@ -46,8 +46,7 @@ export const authProvider: AuthBindings = {
     if (token) {
       return {
         id: 1,
-        name: "John Doe",
-        avatar: "https://i.pravatar.cc/300",
+        name: "Seo",
       };
     }
     return null;
