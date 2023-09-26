@@ -2,6 +2,10 @@ import { AuthBindings } from "@refinedev/core";
 
 export const TOKEN_KEY = "refine-auth";
 
+// The logic is that IF there is an email and password, then login! 
+// We can simply match against email to check for user
+// But is this used anywhere for getting session?
+
 export const authProvider: AuthBindings = {
   login: async ({ username, email, password }) => {
     if ( email && password) {
