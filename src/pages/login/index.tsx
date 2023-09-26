@@ -11,7 +11,7 @@ export const Login = () => {
         />
       }
       formProps={{
-        defaultValues: { email: "demo@refine.dev", password: "demodemo" },
+        defaultValues: { email: "seo@project.dev", password: "demodemo" },
       }}
     />
   );
