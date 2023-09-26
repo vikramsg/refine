@@ -51,7 +51,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <GitHubBanner />
       <RefineKbarProvider>
         <ColorModeContextProvider>
           <CssBaseline />
@@ -100,7 +99,7 @@ function App() {
                         Title={({ collapsed }) => (
                           <ThemedTitleV2
                             collapsed={collapsed}
-                            text="refine Project"
+                            text="Project Home"
                             icon={<AppIcon />}
                           />
                         )}
