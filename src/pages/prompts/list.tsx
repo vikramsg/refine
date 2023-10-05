@@ -1,9 +1,7 @@
 import React from "react";
 import {
     useDataGrid,
-    EditButton,
     ShowButton,
-    DeleteButton,
     List,
 } from "@refinedev/mui";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
@@ -24,7 +22,7 @@ export const CategoryList: React.FC<IResourceComponentsProps> = () => {
                 field: "title",
                 flex: 1,
                 headerName: "Title",
-                minWidth: 200,
+                minWidth: 100,
             },
             {
                 field: "actions",
@@ -33,9 +31,9 @@ export const CategoryList: React.FC<IResourceComponentsProps> = () => {
                 renderCell: function render({ row }) {
                     return (
                         <>
-                            <EditButton hideText recordItemId={row.id} />
+                            {/* <EditButton hideText recordItemId={row.id} /> */}
                             <ShowButton hideText recordItemId={row.id} />
-                            <DeleteButton hideText recordItemId={row.id} />
+                            {/* <DeleteButton hideText recordItemId={row.id} /> */}
                         </>
                     );
                 },

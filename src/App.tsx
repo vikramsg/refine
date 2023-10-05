@@ -27,7 +27,7 @@ import {
   CategoryEdit,
   CategoryList,
   CategoryShow,
-} from "./pages/categories";
+} from "./pages/prompts";
 import { ForgotPassword } from "./pages/forgotPassword";
 import { Login } from "./pages/login";
 import { Register } from "./pages/register";
@@ -46,11 +46,11 @@ function App() {
               routerProvider={routerBindings}
               resources={[
                 {
-                  name: "categories",
-                  list: "/categories",
-                  create: "/categories/create",
-                  edit: "/categories/edit/:id",
-                  show: "/categories/show/:id",
+                  name: "prompts",
+                  list: "/prompts",
+                  create: "/prompts/create",
+                  edit: "/prompts/edit/:id",
+                  show: "/prompts/show/:id",
                   meta: {
                     canDelete: true,
                   },
@@ -83,9 +83,9 @@ function App() {
                 >
                   <Route
                     index
-                    element={<NavigateToResource resource="categories" />}
+                    element={<NavigateToResource resource="prompts" />}
                   />
-                  <Route path="/categories">
+                  <Route path="/prompts">
                     <Route index element={<CategoryList />} />
                     <Route path="create" element={<CategoryCreate />} />
                     <Route path="edit/:id" element={<CategoryEdit />} />
